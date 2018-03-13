@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'animeace2_ital';
+    src: url('font/animeace2_ital.ttf');
+}
+body
+{
+	background-color:darkgrey;
+	font-family: 'animeace2_ital';
+}
+
+header
+{
+	/*display: flex;*/
+	/*text-align: justify;*/
+	margin-left: 100px;
+	margin-right: 100px;
+	/*border-radius: 1em;*/
+	width: 90% auto;
+
+}
+nav ul
+{
+  list-style-type: none;
+  display: flex;
+}
+nav li
+{
+  margin-right: 15px;
+}
+nav a
+{
+  font-size: 1.3em;
+  color: #181818;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+nav a:hover
+{
+  color: #760001;
+  border-bottom: 3px solid #760001;
+}
+.banniere_image
+{
+	margin-top: 40px;
+	height: 300px;
+	border-radius: 5px;
+	background: url('image/hitashi.jpeg');
+	position: relative;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+form {
+	/* Just to center the form on the page */
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 400px;
+
+	/* To see the limits of the form */
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+}
+div + div {
+  margin-top: 2em;
+}
+
+label {
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* To make sure that all text field have the same font settings
+   By default, textarea are set with a monospace font */
+  font: 1em sans-serif;
+
+  /* To give the same size to all text field */
+  width: 300px;
+
+  -moz-box-sizing: border-box;
+     box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highligh on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5em;
+
+  /* To allow users to resize any textarea vertically
+  It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+h1
+{
+  text-align: center;
+}
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra magin represent the same space as the space between
+  the labels and their text fields */
+  margin-left: .5em;
+}

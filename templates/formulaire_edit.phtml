@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulaire edit</title>
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+        <link rel="stylesheet" href="CSS/formulaire_edit.css" />
+    </head>
+    <body>
+    	<header>
+        <nav>
+            <ul>
+	            <li><a href="/">Home</a></li>
+	            <li><a href="formulaire.phtml">Add</a></li>
+	            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="banniere_image">
+        </div>
+      </header>
+      <article>
+      <?php $a=0; ?>
+        <?php foreach ($mangalist as $manga_list): ?>
+            <?php if($a==0){ ?>
+                <div class="form">
+                    <table width="200" border="0">
+                      <tr>
+                        <th scope="col">
+                          <?php if($mangalist->Name=="Naruto"){?>
+                              <img alt="Naruto" src="image/Naruto.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Attack On Titan"){?>
+                              <img alt="Attack_On_Titan" src="image/Attack_On_Titan.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Bleach"){?>
+                              <img alt="Bleach" src="image/Bleach.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Tokyo Ghoul: Re"){?>
+                              <img alt="Tokyo_Ghoul_Re" src="image/Tokyo_Ghoul_Re.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Nanatsu no Taizai"){?>
+                              <img alt="Nanatsu_no_Taizai" src="image/Nanatsu_no_Taizai.png" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Shokugeki no Soma"){?>
+                              <img alt="Shokugeki_no_Soma" src="image/Shokugeki_no_Soma.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="One Piece"){?>
+                              <img alt="One_Piece" src="image/One_Piece.png" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Onepunch-Man"){?>
+                              <img alt="one_punch_man" src="image/one_punch_man.jpeg" /></br>
+                          <?php } ?>
+                          <?php if($mangalist->Name=="Eyeshield 21"){?>
+                              <img alt="One_Piece" src="image/Eyeshield_21.jpeg" /></br>
+                          <?php } ?>
+                        </th>
+                        <th>
+                          <form action="edit" method="post" class="form_edit">
+                            <h1>Edit item</h1>
+                            <div>
+                              <label for="name">Name:</label>
+                              <input type="hidden" id="id" name="id" value ="<?php echo $mangalist->id;?>">
+                              <input type="text" id="name" name="name" value ="<?php echo $mangalist->Name;?>">
+                            </div>
+
+                            <div>
+                              <label for="Autor">Autor:</label>
+                              <input type="text" id="Autor" name="Autor" value ="<?php echo $mangalist->Autor;?>">
+                            </div>
+                            <div>
+                              <label for="DoP">Published:</label>
+                              <input type="number" id="Published" name="Published" min=0 value ="<?php echo $mangalist->Published;?>">
+                            </div>
+                            <div>
+                              <label for="Vol">Volume:</label>
+                              <input type="number" id="Number_of_volume" name="Volume" min=0 value ="<?php echo $mangalist->Volume;?>">
+                            </div>
+                            <div>
+                              <label for="Status">status:</label>
+                              <input type="text" id="Status" name="Status" value ="<?php echo $mangalist->Status;?>">
+                            </div>
+                            <div>
+                              <label for="Like">Description:</label>
+                              <TEXTAREA name="Description" rows=4 cols=40 > <?php echo $mangalist->Description;?></TEXTAREA>
+                            </div>
+                            <div class="button">
+                              <button type="submit" >Validate</button>
+                              <a href="index.phtml">back</a>
+                            </div>
+                          </form>
+                        </th>
+                      </tr>
+                    </table>
+                </div>
+                <?php $a=1;?>
+                  <div class="body">
+        <?php } endforeach; ?>
+        </article>
+
+      </div>
+    </body>
+</html>

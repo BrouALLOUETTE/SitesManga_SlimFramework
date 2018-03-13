@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulaire</title>
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+        <link rel="stylesheet" href="CSS/formulaire_sup.css" />
+    </head>
+    <body>
+      <header>
+        <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="formulaire.phtml">Add</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="banniere_image">
+        </div>
+      </header>
+      <div class="body">
+        <form action="/delete" method="post">
+          <h1>Delete</h1>
+          <div>
+            <label for="number">ID</label>
+            <input type="number" id="id" name="id">
+          </div>
+
+          <div class="button">
+            <button type="submit">Validate</button>
+          </div>
+        </form>
+        <div>
+    </body>
+</html>

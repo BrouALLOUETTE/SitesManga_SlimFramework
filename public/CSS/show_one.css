@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'animeace2_ital';
+    src: url('animeace2_ital.ttf');
+}
+body
+{
+	background-color:darkgrey;
+	font-family: 'animeace2_ital';
+}
+
+header
+{
+	text-align: justify;
+	margin-left: 100px;
+  margin-right: 100px;
+	width: 1100px;
+
+}
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+nav li
+{
+    margin-right: 15px;
+}
+nav a
+{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+nav a:hover
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+.banniere_image
+{
+	margin-top: 40px;
+	height: 300px;
+	background: url('image/hitashi.jpeg');
+	position: relative;
+	box-shadow: 0px 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+
+p{
+	text-align: justify;
+	width: 500px;
+	margin-left: 100px;
+	border: 1px solid #CCC;
+}
+article
+{
+	/*border-bottom: 3px solid;*/
+	margin-left: 200px;
+}
+h1
+{
+	margin-left: 45%;
+}
